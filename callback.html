@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Autorização TikTok - Joabe Mistério</title></head>
+<body style="font-family:Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.6;">
+  <h2>Autorização concluída — Joabe Mistério</h2>
+  <p>Copie a URL completa da barra de endereço (ou o código abaixo) e cole no assistente:</p>
+  <pre id="out" style="background:#f3f4f6;padding:12px;border-radius:6px;overflow:auto;"></pre>
+  <script>
+    const p = new URLSearchParams(window.location.search);
+    document.getElementById('out').textContent = JSON.stringify({
+      code: p.get('code'),
+      scopes: p.get('scopes'),
+      state: p.get('state'),
+      error: p.get('error'),
+      error_description: p.get('error_description')
+    }, null, 2);
+  </script>
+</body>
+</html>
